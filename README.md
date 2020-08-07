@@ -28,13 +28,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
+Document Object Model - Api representation of the ability to manipulate HTML elements
+
 2. What is an event?
+
+When an action happens on the document or element itself - this can be tied to a click , dbl click, scrolling or key presses to name a few.
 
 3. What is an event listener?
 
+this is a line of code that waits for an event explained above, once the event has been heard/triggered the event listener will 
+run a predetermined line of code. - for example, You can apply an event listener to all of your <p>'s so that when the mouse is hovering over the text inside any <p> the text changes color, 
+you may also set it up so that the color changes back once you move the mouse off.
+
 4. Why would we convert a NodeList into an Array?
 
+A nodelist is an array-like list of objects, collection of document nodes. You can loop through the node list and refer to its nodes like an array, 
+however you cannot use the metods = valueof(), push(), join().
+
+
 5. What is a component?
+
+Single modular pieces of Code, reusuable, dry and stand alone. Usually consisting of HTML CSS and javascript.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
