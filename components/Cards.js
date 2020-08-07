@@ -21,7 +21,6 @@
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 const cardEntry = document.querySelector('.cards-container')
-const errors = document.querySelector('.errors-container')	
 	axios.get('https://lambda-times-backend.herokuapp.com/articles')
 	.then( (res) => {
 	console.log(res)
@@ -42,8 +41,8 @@ const errors = document.querySelector('.errors-container')
 	})
 	})
 	.catch(function(error){
-	alert(error)
-	})
+    alert(error)
+    })
 	
 	function makeCard(dataObj){
         const card = document.createElement('div')
