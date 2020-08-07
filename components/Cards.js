@@ -66,8 +66,8 @@ const errors = document.querySelector('.errors-container')
         const span1 = document.createElement('span')
         span1.textContent = `By: ${dataObj.authorName}`
         author.appendChild(span1)
-        const actualCard = document.querySelector('.card')
-        actualCard.addEventListener('click', evt => {
+    
+        card.addEventListener('click', evt => {
          console.log(card.id)
    })
    
