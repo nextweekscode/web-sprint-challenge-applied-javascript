@@ -20,3 +20,56 @@
 // Add a listener for click events so that when a user clicks on a card, the headline of the article is logged to the console.
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
+const cardEntry = document.querySelector('.cards-container')
+const errors = document.querySelector('.errors-container')	
+	axios.get('https://lambda-times-backend.herokuapp.com/articles')
+	.then( (res) => {
+	console.log(res)
+	res.data.articles.javascript.forEach(item => {
+	cardEntry.append(makeCard(item))
+	})
+	res.data.articles.bootstrap.forEach(item => {
+	cardEntry.append(makeCard(item))
+	})
+	res.data.articles.node.forEach(item => {
+	cardEntry.append(makeCard(item))
+	})
+	res.data.articles.technology.forEach(item => {
+	cardEntry.append(makeCard(item))
+	})
+	res.data.articles.jquery.forEach(item => {
+	cardEntry.append(makeCard(item))
+	})
+	})
+	.catch(function(error){
+	alert(error)
+	})
+	
+	function makeCard(dataObj){
+        const card = document.createElement('div')
+        card.className = 'card'
+        card.setAttribute('id', `${dataObj.headline}`)
+        cardEntry.appendChild(card)
+        const headline = document.createElement('div')
+        headline.className = 'headline'
+        headline.textContent = dataObj.headline
+        card.appendChild(headline)
+        const author = document.createElement('div')
+        author.className = 'author'
+        card.appendChild(author)
+        const imgCon = document.createElement('div')
+        imgCon.className = 'img-container'
+        author.appendChild(imgCon)
+        const img = document.createElement('img')
+        imgCon.appendChild(img)
+        img.src = dataObj.authorPhoto
+        const span1 = document.createElement('span')
+        span1.textContent = `By: ${dataObj.authorName}`
+        author.appendChild(span1)
+        const actualCard = document.querySelector('.card')
+        actualCard.addEventListener('click', evt => {
+         console.log(card.id)
+   })
+   
+	return card
+    }
