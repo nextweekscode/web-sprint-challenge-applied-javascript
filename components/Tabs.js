@@ -21,6 +21,7 @@ const tabURL = 'https://lambda-times-backend.herokuapp.com/topics'
 	let tab=document.createElement('div')
 	tab.className = 'tab'
 	tab.textContent = item
-	tabEntryPoint.appendChild(tab)
+    tabEntryPoint.appendChild(tab)
+ 
 	})
 	})

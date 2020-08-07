@@ -32,7 +32,7 @@ Document Object Model - Api representation of the ability to manipulate HTML ele
 
 2. What is an event?
 
-When an action happens on the document or element itself - this can be tied to a click , dbl click, scrolling or key presses to name a few.
+When user action happens an event is triggered. - this can be tied to a click , dbl click, scrolling or key presses to name a few.
 
 3. What is an event listener?
 
